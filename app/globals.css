@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+  color: #171717;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, a, input, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+::selection { background: #dbeafe; color: #1e3a8a; }
+
+@layer components {
+  .portfolio-main { @apply min-h-screen px-3 py-3 sm:px-5 sm:py-4 lg:pl-[285px]; }
+  .portfolio-shell { @apply w-full; }
+  .sidebar-panel { @apply fixed left-3 top-3 z-30 hidden h-[calc(100vh-1.5rem)] w-[250px] rounded-[10px] bg-muted-bg lg:flex; }
+  .avatar-mark { @apply flex h-[30px] w-[30px] items-center justify-center rounded-[7px] bg-accent text-sm font-medium text-white; }
+  .hero-section { @apply border-b border-line pb-4 pt-2; }
+  .hero-copy { @apply max-w-3xl; }
+  .availability { @apply rounded-full bg-accent-soft px-2 py-0.5 text-[9px] text-accent; }
+  .featured-card { @apply mt-2 rounded-[9px] border border-line bg-white px-3 py-3; }
+  .tag { @apply rounded-[4px] bg-accent-soft px-1.5 py-0.5 text-[9px] text-accent; }
+  .section-block { @apply border-b border-line py-7; }
+  .eyebrow { @apply text-[10px] font-medium uppercase tracking-wide text-accent; }
+  .section-title { @apply mt-2 text-xl font-semibold tracking-tight text-ink sm:text-2xl; }
+  .section-copy { @apply mt-2 max-w-2xl text-sm leading-6 text-muted; }
+  .focus-ring { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2; }
+  .about-section { position: relative; isolation: isolate; clear: both; }
+  .about-content > * { min-width: 0; }
+}
+
+@media (max-width: 1023px) {
+  .portfolio-main { @apply px-4 pt-20; }
+}
+
+@media (min-width: 1024px) {
+  #about, #skills, #experience, #contact { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
