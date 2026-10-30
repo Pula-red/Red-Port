@@ -15,10 +15,11 @@ export default function Hero() {
             <a href="#projects" className="focus-ring inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-hover">View projects <Icon name="arrow" size={16} /></a>
             <a href="#contact" className="focus-ring inline-flex items-center rounded-md border border-line bg-surface px-5 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent">Contact me</a>
             <div className="flex items-center gap-2" aria-label="Social links">
-              <a href="https://github.com/" target="_blank" rel="noreferrer" className="focus-ring social-link" aria-label="GitHub" title="GitHub"><Icon name="github" size={15} /></a>
-              <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="focus-ring social-link" aria-label="LinkedIn" title="LinkedIn"><Icon name="linkedin" size={15} /></a>
-              <a href="https://facebook.com/" target="_blank" rel="noreferrer" className="focus-ring social-link" aria-label="Facebook" title="Facebook"><Icon name="facebook" size={15} /></a>
-              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="focus-ring social-link" aria-label="Instagram" title="Instagram"><Icon name="instagram" size={15} /></a>
+              <a href="https://github.com/Pula-red" target="_blank" rel="noreferrer" className="focus-ring social-link" aria-label="GitHub" title="GitHub"><Icon name="github" size={15} /></a>
+              <a href="https://www.linkedin.com/in/john-jared-bueta-474376271/" target="_blank" rel="noreferrer" className="focus-ring social-link" aria-label="LinkedIn" title="LinkedIn"><Icon name="linkedin" size={15} /></a>
+              <a href="https://www.facebook.com/profile.php?id=61590779427219" target="_blank" rel="noreferrer" className="focus-ring social-link" aria-label="Facebook" title="Facebook"><Icon name="facebook" size={15} /></a>
+              <a href="https://www.instagram.com/buetajohnjared/" target="_blank" rel="noreferrer" className="focus-ring social-link" aria-label="Instagram" title="Instagram"><Icon name="instagram" size={15} /></a>
+              <a href="viber://chat?number=%2B639813193447" className="focus-ring social-link" aria-label="Viber" title="Viber"><Icon name="viber" size={15} /></a>
               <a href="https://wa.me/639813193447" target="_blank" rel="noreferrer" className="focus-ring social-link" aria-label="WhatsApp" title="WhatsApp"><Icon name="whatsapp" size={15} /></a>
             </div>
           </div>
