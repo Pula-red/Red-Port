@@ -5,11 +5,11 @@ export default function Hero() {
     <section id="top" className="hero-section" aria-labelledby="hero-title">
       <div className="flex min-h-[620px] items-center justify-center py-10 md:py-12">
         <div className="hero-copy w-full max-w-4xl text-left">
-          <h1 id="hero-title" className="hero-title mt-5 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.06em] text-ink sm:text-7xl lg:text-8xl">
-            <span className="block">John Jared</span>
+          <h1 id="hero-title" className="hero-title mt-5 max-w-4xl text-5xl font-bold leading-none tracking-[-0.055em] text-ink sm:text-7xl lg:text-8xl">
+            <span className="hero-title-filled block">John Jared</span>
             <span className="hero-title-outline block">Bueta.</span>
           </h1>
-          <p className="mt-4 text-xl font-bold tracking-tight text-ink sm:text-2xl">Software Developer</p>
+          <p className="hero-role mt-5 text-xl font-bold text-ink sm:text-2xl">Software Developer</p>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-muted sm:text-xl">I&apos;m a Software developer specializing in front-end and back-end development, building responsive websites and efficient digital systems that solve operational challenges.</p>
           <div className="mt-7 flex flex-wrap items-center justify-start gap-3">
             <a href="#projects" className="focus-ring inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-hover">View projects <Icon name="arrow" size={16} /></a>

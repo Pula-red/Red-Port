@@ -5,9 +5,9 @@ import { useTheme } from './ThemeProvider';
 import Icon from './Icon';
 
 const themes = [
+  { value: 'system', label: 'System', icon: 'monitor' },
   { value: 'light', label: 'Light', icon: 'sun' },
   { value: 'dark', label: 'Dark', icon: 'moon' },
-  { value: 'system', label: 'System', icon: 'monitor' },
 ];
 
 export default function ThemeToggle() {
@@ -15,7 +15,7 @@ export default function ThemeToggle() {
   const toggleRef = useRef(null);
 
   return (
-    <div ref={toggleRef} className="theme-toggle" role="group" aria-label="Color theme">
+    <div ref={toggleRef} className="theme-toggle" role="group" aria-label="Color theme" data-active-theme={theme}>
       {themes.map((item) => (
         <button
           key={item.value}

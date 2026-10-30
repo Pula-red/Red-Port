@@ -14,6 +14,9 @@ export default function Icon({ name, size = 18, strokeWidth = 1.8, className = '
 
   const paths = {
     arrow: <><path d="M5 12h14" /><path d="m13 6 6 6-6 6" /></>,
+    'arrow-up': <><path d="M12 19V5" /><path d="m6 11 6-6 6 6" /></>,
+    'chevron-left': <path d="m15 18-6-6 6-6" />,
+    'chevron-right': <path d="m9 18 6-6-6-6" />,
     close: <><path d="M6 6l12 12" /><path d="M18 6 6 18" /></>,
     menu: <><path d="M4 6h16" /><path d="M4 12h16" /><path d="M4 18h16" /></>,
     external: <><path d="M14 4h6v6" /><path d="M10 14 20 4" /><path d="M20 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h4" /></>,
