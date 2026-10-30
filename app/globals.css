@@ -304,6 +304,10 @@ h1, h2, h3, h4, .sidebar-nav-link { font-family: var(--font-heading); }
   .project-card-footer { min-height: 36px; }
   .project-action { @apply inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-accent-hover; }
   .project-github-action { @apply rounded-md border border-line p-2; }
+  .contact-form-status { @apply flex items-center gap-2 text-xs; }
+  .contact-form-status-success { @apply text-accent; animation: contact-status-in 350ms ease both; }
+  .contact-form-status-error { @apply text-red-400; }
+  .contact-form-success-icon { @apply flex h-5 w-5 items-center justify-center rounded-full bg-accent text-white; animation: contact-success-pop 450ms cubic-bezier(.2,.8,.2,1.2) both; }
   .about-section { position: relative; isolation: isolate; clear: both; }
   .about-content > * { min-width: 0; }
 }
@@ -343,6 +347,16 @@ h1, h2, h3, h4, .sidebar-nav-link { font-family: var(--font-heading); }
 
 @keyframes project-card-slide-in {
   from { opacity: 0.45; transform: scale(1.02); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes contact-status-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes contact-success-pop {
+  from { opacity: 0; transform: scale(0.5); }
   to { opacity: 1; transform: scale(1); }
 }
 

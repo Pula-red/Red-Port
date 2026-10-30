@@ -6,19 +6,16 @@ import Icon from './Icon';
 const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '8a4cdf74-5c17-4cf9-a0be-6e6590861238';
 
 export default function Contact() {
-  const [status, setStatus] = useState('');
+  const [formValues, setFormValues] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState({ type: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
+    const { name, email, message } = formValues;
 
     setIsSubmitting(true);
-    setStatus('Sending your message...');
+    setStatus({ type: 'sending', message: 'Sending your message...' });
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -40,10 +37,10 @@ export default function Contact() {
         throw new Error(result.message || 'The form service could not send your message.');
       }
 
-      form.reset();
-      setStatus('Message sent successfully. Thank you for reaching out.');
+      setFormValues({ name: '', email: '', message: '' });
+      setStatus({ type: 'success', message: 'Message sent successfully. Thank you for reaching out.' });
     } catch (error) {
-      setStatus(error instanceof Error ? error.message : 'Unable to send your message. Please try again.');
+      setStatus({ type: 'error', message: error instanceof Error ? error.message : 'Unable to send your message. Please try again.' });
     } finally {
       setIsSubmitting(false);
     }
@@ -63,10 +60,10 @@ export default function Contact() {
           <a href="https://www.instagram.com/buetajohnjared/" target="_blank" rel="noreferrer" className="focus-ring flex items-center gap-3 text-muted hover:text-accent"><Icon name="instagram" size={17} className="text-accent" /> instagram.com/buetajohnjared</a>
         </div>
         <form className="space-y-6" onSubmit={handleSubmit}>
-          <div className="grid gap-5 sm:grid-cols-2"><label className="block text-sm font-medium text-ink">Name<input className="focus-ring mt-2 block w-full border border-line bg-surface px-3.5 py-3 text-sm font-normal text-ink outline-none placeholder:text-muted focus:border-accent" type="text" name="name" placeholder="Your name" required /></label><label className="block text-sm font-medium text-ink">Email<input className="focus-ring mt-2 block w-full border border-line bg-surface px-3.5 py-3 text-sm font-normal text-ink outline-none placeholder:text-muted focus:border-accent" type="email" name="email" placeholder="you@example.com" required /></label></div>
-          <label className="block text-sm font-medium text-ink">Message<textarea className="focus-ring mt-2 block min-h-32 w-full resize-y border border-line bg-surface px-3.5 py-3 text-sm font-normal text-ink outline-none placeholder:text-muted focus:border-accent" name="message" placeholder="Tell me a little about your project" required /></label>
+          <div className="grid gap-5 sm:grid-cols-2"><label className="block text-sm font-medium text-ink">Name<input className="focus-ring mt-2 block w-full border border-line bg-surface px-3.5 py-3 text-sm font-normal text-ink outline-none placeholder:text-muted focus:border-accent" type="text" name="name" placeholder="Your name" value={formValues.name} onChange={(event) => setFormValues({ ...formValues, name: event.target.value })} required /></label><label className="block text-sm font-medium text-ink">Email<input className="focus-ring mt-2 block w-full border border-line bg-surface px-3.5 py-3 text-sm font-normal text-ink outline-none placeholder:text-muted focus:border-accent" type="email" name="email" placeholder="you@example.com" value={formValues.email} onChange={(event) => setFormValues({ ...formValues, email: event.target.value })} required /></label></div>
+          <label className="block text-sm font-medium text-ink">Message<textarea className="focus-ring mt-2 block min-h-32 w-full resize-y border border-line bg-surface px-3.5 py-3 text-sm font-normal text-ink outline-none placeholder:text-muted focus:border-accent" name="message" placeholder="Tell me a little about your project" value={formValues.message} onChange={(event) => setFormValues({ ...formValues, message: event.target.value })} required /></label>
           <button className="focus-ring inline-flex items-center gap-2 bg-accent px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-60" type="submit" disabled={isSubmitting}>{isSubmitting ? 'Sending...' : 'Send message'} {!isSubmitting && <Icon name="arrow" size={16} />}</button>
-          {status && <p className="text-xs text-muted" role="status">{status}</p>}
+          {status.message && <p className={`contact-form-status contact-form-status-${status.type}`} role="status">{status.type === 'success' && <span className="contact-form-success-icon"><Icon name="check" size={14} /></span>}{status.message}</p>}
         </form>
       </div>
     </section>
