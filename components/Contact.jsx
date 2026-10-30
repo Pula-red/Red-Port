@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Icon from './Icon';
 
+const web3FormsAccessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '8a4cdf74-5c17-4cf9-a0be-6e6590861238';
+
 export default function Contact() {
   const [status, setStatus] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -22,7 +24,7 @@ export default function Contact() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          access_key: web3FormsAccessKey,
           subject: `Portfolio inquiry from ${name}`,
           from_name: 'John Jared Bueta Portfolio',
           replyto: email,
