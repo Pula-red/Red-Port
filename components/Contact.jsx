@@ -11,7 +11,8 @@ export default function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const name = formData.get('name');
     const email = formData.get('email');
     const message = formData.get('message');
@@ -39,7 +40,7 @@ export default function Contact() {
         throw new Error(result.message || 'The form service could not send your message.');
       }
 
-      event.currentTarget.reset();
+      form.reset();
       setStatus('Message sent successfully. Thank you for reaching out.');
     } catch (error) {
       setStatus(error instanceof Error ? error.message : 'Unable to send your message. Please try again.');
