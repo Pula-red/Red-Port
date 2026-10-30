@@ -32,12 +32,12 @@
   --surface: #171d29;
   --ink: #f3f5f8;
   --muted: #a7b0c0;
-  --line: #364154;
+  --line: #3b4962;
   --accent: #8ea7ff;
   --accent-hover: #b0c0ff;
   --accent-soft: #202b49;
   --dark-bg: #f3f5f8;
-  --shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
   --portrait-outline: #c5ccd8;
   --portrait-glow: rgba(142, 167, 255, 0.2);
   --divider: #46536a;
@@ -187,6 +187,8 @@ h1, h2, h3, h4, .sidebar-nav-link { font-family: var(--font-heading); }
   .hero-role { font-family: var(--font-heading); letter-spacing: -0.045em; line-height: 1.1; }
   .availability { @apply rounded-full bg-accent-soft px-2 py-0.5 text-[9px] text-accent; }
   .featured-card { @apply mt-2 rounded-[9px] border border-line bg-surface px-3 py-3; }
+  :root[data-theme='dark'] .featured-card, :root[data-theme='dark'] .project-card, :root[data-theme='dark'] .technology-card { box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14); }
+  :root[data-theme='dark'] .featured-card:hover, :root[data-theme='dark'] .technology-card:hover { border-color: var(--accent); box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22), 0 0 22px color-mix(in srgb, var(--accent) 10%, transparent); }
   .tag { @apply rounded-[4px] bg-accent-soft px-1.5 py-0.5 text-[9px] text-accent; }
   .section-block { @apply border-b border-line py-12 sm:py-16; }
   .eyebrow { @apply text-[10px] font-medium uppercase tracking-wide text-accent; }
@@ -231,11 +233,11 @@ h1, h2, h3, h4, .sidebar-nav-link { font-family: var(--font-heading); }
   .back-to-top-ring-progress { stroke: var(--accent); stroke-linecap: round; stroke-dasharray: 138.23; transition: stroke-dashoffset 100ms linear; }
   .project-card-slide { transition: opacity 200ms ease; }
   .project-card { transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease; }
-  .project-card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow); }
+  .project-card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow), 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent); }
   .project-card-count { @apply absolute left-3 top-3 z-[1] rounded-full border border-line bg-surface px-2.5 py-1 text-[11px] font-medium text-ink shadow-sm; }
   .project-card-controls { @apply absolute bottom-3 right-3 z-[1] flex gap-2; }
   .project-card-arrow { @apply flex h-8 w-8 items-center justify-center rounded-full border border-line bg-surface text-ink shadow-sm transition-colors duration-200 hover:border-accent hover:text-accent; }
-  .social-link { @apply flex h-8 w-8 items-center justify-center rounded-md border border-line text-ink transition-all hover:-translate-y-0.5 hover:border-accent hover:text-accent; }
+  .social-link { @apply flex h-8 w-8 items-center justify-center rounded-md border border-line bg-surface text-ink transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:bg-accent-soft hover:text-accent; }
   .about-heading { @apply max-w-4xl; }
   .about-profile-card { @apply mx-auto w-full max-w-[340px]; }
   .about-portrait { @apply mx-auto w-full; }
@@ -294,13 +296,15 @@ h1, h2, h3, h4, .sidebar-nav-link { font-family: var(--font-heading); }
   .technology-mark-arduino { color: #00979d; }
   .technology-mark-android-development { color: #3ddc84; }
   .technology-mark-rest-apis { color: var(--accent); }
-  .project-card-image { @apply relative aspect-[16/9] overflow-hidden rounded-md border border-line bg-canvas; }
+  .project-card-image { @apply relative aspect-[16/9] overflow-hidden rounded-t-md rounded-b-none border border-line bg-canvas; }
   .project-card-image img { @apply transition-transform duration-300 group-hover:scale-[1.03]; }
   .project-category { @apply inline-flex w-fit self-start rounded-md border border-line bg-canvas px-2.5 py-1 text-[10px] font-medium uppercase tracking-wide text-ink; }
   .project-tech-stack { @apply min-w-0; }
   .project-tech-label { @apply text-[10px] font-medium uppercase tracking-wider text-muted; }
-  .project-tech { @apply rounded-full border border-line bg-canvas px-2.5 py-1 text-[11px] text-muted; }
+  .project-tech { @apply rounded-full border border-line bg-canvas px-2.5 py-1 text-[11px] text-muted transition-colors duration-200; }
+  .project-tech:hover { @apply border-accent text-accent; }
   .project-card-description { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+  .project-card-content { @apply rounded-b-xl; }
   .project-card-footer { min-height: 36px; }
   .project-action { @apply inline-flex items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-accent-hover; }
   .project-github-action { @apply rounded-md border border-line p-2; }

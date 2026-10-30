@@ -19,7 +19,7 @@ export default function About() {
         <div className="about-profile-card">
           <div className="about-portrait">
             <div className="about-portrait-inner">
-              <Image src="/images/projects/RED-NO-BG.png" alt="John Jared Bueta profile" fill className="object-contain object-bottom" sizes="320px" />
+              <Image src="/images/projects/RED2-NO-BG.png" alt="John Jared Bueta profile" fill className="object-contain object-bottom" sizes="320px" />
             </div>
           </div>
         </div>

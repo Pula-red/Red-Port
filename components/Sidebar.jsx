@@ -42,7 +42,7 @@ export default function Sidebar() {
     <aside className="sidebar-panel">
       <div className="flex h-full flex-col px-6 py-6">
         <div className="sidebar-avatar">
-          <Image src="/images/projects/RED-NO-BG.png" alt="John Jared Bueta profile" fill className="sidebar-avatar-image scale-125 object-contain object-bottom" sizes="220px" />
+          <Image src="/images/projects/RED2-NO-BG.png" alt="John Jared Bueta profile" fill className="sidebar-avatar-image scale-125 object-contain object-bottom" sizes="220px" />
         </div>
         <a href="#top" className="focus-ring inline-block" aria-label="Jared home">
           <span className="mt-6 block text-center text-xl font-semibold text-ink">John Jared Bueta</span>
