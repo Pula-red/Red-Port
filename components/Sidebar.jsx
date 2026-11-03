@@ -11,6 +11,7 @@ const navigation = [
   { label: 'Projects', id: 'projects', icon: 'folder' },
   { label: 'Skills', id: 'skills', icon: 'code' },
   { label: 'Experience', id: 'experience', icon: 'briefcase' },
+  { label: 'Certificates', id: 'certificates', icon: 'certificate' },
   { label: 'Contact', id: 'contact', icon: 'mail' },
 ];
 

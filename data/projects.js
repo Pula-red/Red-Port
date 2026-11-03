@@ -4,9 +4,15 @@ export const projects = [
   {
     title: 'EPCD Operations',
     category: 'Web',
+    projectType: 'Operations Workspace',
     github: 'https://github.com/LeeDev428/epcd',
     technologies: ['Laravel', 'PHP', 'React', 'SQL'],
     description: 'An Environmental Protection and Compliance Division operations workspace for shipment encoding, records, workload monitoring, and enforcement activity.',
+    features: [
+      'Shipment encoding and records',
+      'Workload monitoring',
+      'Enforcement activity tracking',
+    ],
     images: [
       projectImage('EPCD', 'Screenshot 2026-10-30 143944.png'),
       projectImage('EPCD', 'Screenshot 2026-10-30 144021.png'),
@@ -16,8 +22,15 @@ export const projects = [
   {
     title: 'Fiber Express Corporation',
     category: 'Web',
+    projectType: 'Corporate Website',
     technologies: ['PHP', 'MySQL'],
-    description: 'A fiber internet and television website presenting services, plans, payment methods, and customer contact options.',
+    description: 'A responsive corporate landing page designed to showcase Fiber Express Corporation\'s internet plans, promotional offers, and services. Provides visitors with an organized overview of available packages and company offerings.',
+    features: [
+      'Internet plans and promotional offers showcase',
+      'Service and package information',
+      'Responsive landing page',
+      'Company information and service highlights',
+    ],
     images: [
       projectImage('fxcp', 'Screenshot 2026-05-12 193500.png'),
       projectImage('fxcp', 'Screenshot 2026-10-30 142617.png'),
@@ -26,12 +39,18 @@ export const projects = [
   {
     title: 'Power Cable Internet Services',
     category: 'Web',
+    projectType: 'Business Operations System',
     technologies: ['PHP', 'SQL'],
     description: 'A business operations system for subscriber records, payments, billing, collections, and account management.',
+    features: [
+      'Subscriber records management',
+      'Payment and billing tracking',
+      'Collections management',
+      'Account management',
+    ],
     images: [
       projectImage('ICPS', 'Screenshot (372).png'),
       projectImage('ICPS', 'Screenshot (375).png'),
-      projectImage('ICPS', 'Screenshot 2026-04-09 161632.png'),
       projectImage('ICPS', 'Screenshot 2026-04-09 165301.png'),
       projectImage('ICPS', 'Screenshot 2026-04-15 092811.png'),
       projectImage('ICPS', 'Screenshot 2026-04-27 094129.png'),
@@ -40,15 +59,32 @@ export const projects = [
   {
     title: 'Patintero',
     category: 'Other',
-    technologies: ['PHP', 'SQL'],
-    description: 'A browser-based Filipino street game with a colorful game menu and options for starting play, settings, and guidance.',
+    projectType: 'Web-Based Game',
+    technologies: ['PHP', 'JavaScript', 'HTML', 'CSS'],
+    description: 'A digital adaptation of the traditional Filipino game Patintero, preserving its original gameplay mechanics while introducing interactive power-ups. Brings a classic Filipino street game into an engaging browser-based gaming experience.',
+    features: [
+      'Traditional Patintero gameplay mechanics',
+      'Interactive player movement',
+      'Power-ups and special abilities',
+      'Browser-based gameplay',
+    ],
     images: [projectImage('Patintero', '1772439651427.jpg')],
   },
   {
     title: 'Robles-Moncayo Dental Clinic',
     category: 'Web',
+    projectType: 'Clinic Management System',
     technologies: ['Laravel', 'PHP', 'MySQL', 'Tailwind CSS'],
-    description: 'A dental clinic website and management system covering appointments, patient records, messaging, dental charts, and clinic operations.',
+    description: 'A comprehensive dental clinic management system designed to streamline patient care and daily clinic operations. Integrates appointment scheduling, patient records, dental charts, messaging, and automated administrative processes.',
+    features: [
+      'Online appointment scheduling',
+      'Patient records management',
+      'Real-time notifications and messaging',
+      'Interactive dental charts',
+      'Inventory management',
+      'Analytics and reporting',
+      'Payment integration',
+    ],
     images: [
       projectImage('RMDC', 'Screenshot 2026-10-30 144150.png'),
       projectImage('RMDC', 'Screenshot 2026-10-30 144320.png'),
@@ -63,8 +99,17 @@ export const projects = [
   {
     title: 'Big Five Payroll System',
     category: 'Web',
+    projectType: 'Payroll Management System',
     technologies: ['PHP', 'SQL'],
-    description: 'A payroll management system with employee records, earnings, deductions, summaries, payslip generation, and PDF output.',
+    description: 'An employee payroll management system that automates salary computation, attendance monitoring, and payroll processing. Simplifies employee compensation through automated DTR calculations, earnings and deductions tracking, and PDF payslip generation.',
+    features: [
+      'Employee records management',
+      'Daily Time Record (DTR) management',
+      'Automatic attendance and working-hour calculations',
+      'Earnings and deductions management',
+      'Payroll summaries',
+      'Payslip generation and PDF export',
+    ],
     images: [
       projectImage('TB5-PAYROLL', 'Screenshot 2026-04-07 111819.png'),
       projectImage('TB5-PAYROLL', 'Screenshot 2026-05-04 141928.png'),
@@ -74,19 +119,36 @@ export const projects = [
   {
     title: 'Big Blossom POS',
     category: 'Web',
+    projectType: 'Point-of-Sale System',
     technologies: ['PHP', 'SQL'],
-    description: 'A point-of-sale system for product browsing, category filtering, cart management, checkout, inventory, and order processing.',
+    description: 'A QR code-based Point-of-Sale system that simplifies product selection and in-store checkout. Allows customers to browse available products, build shopping carts, and generate QR codes that cashiers scan to retrieve orders and process transactions through an integrated cash drawer.',
+    features: [
+      'QR code-based product browsing',
+      'Product catalog and availability',
+      'Shopping cart management',
+      'QR code checkout and order retrieval',
+      'Cashier-side order processing',
+      'Cash drawer integration',
+    ],
     images: [
       projectImage('TB5-POS', 'FB_IMG_1790706751324.jpg'),
       projectImage('TB5-POS', 'Screenshot 2026-04-17 133637.png'),
-      projectImage('TB5-POS', 'Screenshot 2026-04-17 154437.png'),
     ],
   },
   {
     title: 'Xero Claro',
     category: 'Web',
+    projectType: 'Service Management System',
     technologies: ['PHP', 'SQL'],
-    description: 'A helmet care service website presenting professional cleaning services, booking options, and service information.',
+    description: 'A role-based helmet cleaning management system that digitizes service bookings and tracks cleaning transactions through QR codes. Connects customer bookings with in-store service monitoring while providing inventory management for operational supplies.',
+    features: [
+      'Role-based user access',
+      'Online service booking',
+      'QR code generation for bookings',
+      'QR code scanning and transaction tracking',
+      'In-store service monitoring',
+      'Inventory management',
+    ],
     images: [
       projectImage('XeroClaro', 'FB_IMG_1790706798148.jpg'),
       projectImage('XeroClaro', 'Messenger_creation_E2D54A8F-BD4A-4B09-A76B-3CBAF2BE3016.png'),

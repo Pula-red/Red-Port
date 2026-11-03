@@ -48,7 +48,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-12 sm:py-14" aria-labelledby="contact-title">
-      <p className="eyebrow">05 / Contact</p>
+      <p className="eyebrow">06 / Contact</p>
       <h2 id="contact-title" className="section-title">Let&apos;s connect</h2>
       <p className="section-copy">If you have a project, idea, or opportunity, feel free to reach out.</p>
       <div className="mt-10 grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">

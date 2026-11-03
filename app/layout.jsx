@@ -8,6 +8,10 @@ import BackToTop from '../components/BackToTop';
 export const metadata = {
   title: 'John Jared Bueta - Software Developer',
   description: 'The personal portfolio of John Jared Bueta, a full-stack developer building practical software.',
+  icons: {
+    icon: '/images/favicon.png',
+    apple: '/images/favicon.png',
+  },
 };
 
 export default function RootLayout({ children }) {

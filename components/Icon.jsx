@@ -41,6 +41,7 @@ export default function Icon({ name, size = 18, strokeWidth = 1.8, className = '
     tool: <><path d="m14.7 6.3 3-3a4.2 4.2 0 0 0-5.5 5.5l-7.5 7.5a2 2 0 1 0 2.8 2.8l7.5-7.5a4.2 4.2 0 0 0 5.5-5.5l-3 3Z" /></>,
     cpu: <><rect width="12" height="12" x="6" y="6" rx="2" /><path d="M9 1v5M15 1v5M9 18v5M15 18v5M1 9h5M1 15h5M18 9h5M18 15h5" /></>,
     school: <><path d="m3 9 9-5 9 5-9 5-9-5Z" /><path d="M7 11v5c2.8 2.2 7.2 2.2 10 0v-5M21 9v6" /></>,
+    certificate: <><circle cx="12" cy="8" r="5" /><path d="m9.5 12.2-1 8 3.5-2 3.5 2-1-8" /><path d="m10 8 1.3 1.3L14 6.7" /></>,
     location: <><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></>,
     phone: <path d="M6.6 3.5 9 3l2 5-2 1.5a15 15 0 0 0 5.5 5.5L16 13l5 2-.5 2.4A3 3 0 0 1 17.6 20C10.1 19.2 4.8 13.9 4 6.4a3 3 0 0 1 2.6-2.9Z" />,
   };
